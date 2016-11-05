@@ -10,4 +10,7 @@
     <input type="password" name="senha"><br><br>
     
     <input type="submit" value="Cadastrar">
+    <?php
+        if(!empty($aviso)) echo $aviso;
+    ?>
 </form>

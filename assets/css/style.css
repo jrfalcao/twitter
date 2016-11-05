@@ -1,0 +1,13 @@
+/* 
+    Created on : 05/11/2016, 19:23:43
+    Author     : junior
+*/
+*{margin: 0; padding: 0;}
+.barraTop{ background-color: #012; color: aliceblue;line-height: 35px}
+.top{width: 80%; margin: auto;}
+.logo{}
+.nomeLogout{float: right}
+.nomeLogout a{color: #fff; text-decoration: none}
+.nomeLogout a:hover{color: #ccc; text-decoration: underline}
+.content{width: 80%; margin: auto}
+footer{background-color: #012; padding: 1em 0; color: #fff; width: 100%; position: fixed; bottom: 0;}
