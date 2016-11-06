@@ -28,7 +28,11 @@
         <tr>
             <td><?= $usuario['nome'] ?></td>
             <td>
-                <a href="">Seguir</a>
+                <?php if($usuario['seguido'] == 0 ): ?>
+                    <a href="/twitter/home/seguir/<?= $usuario['id'] ?>">Seguir</a>
+                <?php else:?>
+                    <a href="/twitter/home/deseguir/<?= $usuario['id']?>">Deseguir</a>
+                <?php endif;?>
             </td>
         </tr>
         <?php endforeach; ?>

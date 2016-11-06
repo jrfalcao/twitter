@@ -27,4 +27,28 @@ class homeController extends controller{
         $this->loadTemplate("home", $dados);
     }
     
+    public function seguir($id) {
+        if (!empty($id)) {
+            $id = addslashes($id);
+            $u = new usuarios($id);
+            if(NULL !== $u->getNome()){
+                $r = new relacionamentos();
+                $r->seguir($_SESSION['twlg'],$id);
+            }
+        }
+        header("Location: /twitter");
+    }
+    
+    public function deseguir($id) {
+        if (!empty($id)) {
+            $id = addslashes($id);
+            $u = new usuarios($id);
+            if(NULL !== $u->getNome()){
+                $r = new relacionamentos();
+                $r->deseguir($_SESSION['twlg'],$id);
+            }
+        }
+        header("Location: /twitter");
+    }
+    
 }
