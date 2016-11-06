@@ -9,7 +9,7 @@
         <div class="barraTop">
             <section class="top">
                 <span class="logo">Twitter</span>
-                <span class="nomeLogout"> - <a href="/twitter/login/logout">Sair!</a></span>
+                <span class="nomeLogout"><?= $viewData['nome'] ?> - <a href="/twitter/login/logout">Sair!</a></span>
             </section>
         </div>
         <div class="content">

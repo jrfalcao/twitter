@@ -3,7 +3,7 @@
     Author     : junior
 */
 *{margin: 0; padding: 0;}
-.barraTop{ background-color: #012; color: aliceblue;line-height: 35px}
+.barraTop{ background-color: #012; color: aliceblue;line-height: 35px; padding-left: 10px; padding-right: 10px}
 .top{width: 80%; margin: auto;}
 .logo{}
 .nomeLogout{float: right}
@@ -11,3 +11,8 @@
 .nomeLogout a:hover{color: #ccc; text-decoration: underline}
 .content{width: 80%; margin: auto}
 footer{background-color: #012; padding: 1em 0; color: #fff; width: 100%; position: fixed; bottom: 0;}
+.feeds{float:left;width: 67%; padding: 10px 5px; margin-right: 10px; background-color: #ccc; 
+    min-height: 400px; overflow:auto}
+.navDir{float: left; width: 30%; background-color: #ccc; min-height: 400px; padding: 10px 5px}
+.feed{}
+.rs_meio {width:50%;height:50px;float:left;text-align: center;}
