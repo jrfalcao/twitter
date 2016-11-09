@@ -18,11 +18,20 @@ class homeController extends controller{
         $dados = array(
             'nome'=> ''
         );
+        $p = new posts();
+        if(isset($_POST['msg']) && !empty($_POST['msg'])){
+            $msg = addslashes(filter_input(INPUT_POST,'msg'));
+            $p->inserirPost($msg);
+        }
         $u = new usuarios($_SESSION['twlg']);
         $dados['nome'] = $u->getNome();
         $dados['qt_seguidos'] = $u->countSeguidos();
         $dados['qt_seguidores'] = $u->countSeguidores();
         $dados['sugeridos'] = $u->getUsuarios(5);
+        
+        $lista = $u->getSeguidos();
+        $lista[] = $_SESSION['twlg'];
+        $dados['feed'] = $p->getFeed($lista,10);
         
         $this->loadTemplate("home", $dados);
     }
